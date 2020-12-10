@@ -7,9 +7,7 @@ import '../../shared-styles/loader.scss';
 import * as constants from '../../constants';
 
 const Programs = () => {
-    const lauchPrograms = useSelector(state => state.launchPrograms.data);
-    const hasError = useSelector(state => state.launchPrograms.hasError);
-    const isLoading = useSelector(state => state.launchPrograms.loading);
+    const { data, hasError, loading } = useSelector(state => state.launchPrograms);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -19,9 +17,9 @@ const Programs = () => {
     return (
         <div className="programs">
             {
-                (lauchPrograms.length !== 0) ?
-                    <Cards lauchPrograms={lauchPrograms} /> :
-                    (isLoading) ? <Loader /> : (hasError) ? <Error /> : <Noprograms />
+                (data.length !== 0) ?
+                    <Cards lauchPrograms={data} /> :
+                    (loading) ? <Loader /> : (hasError) ? <Error /> : <Noprograms />
             }
         </div>
     );
