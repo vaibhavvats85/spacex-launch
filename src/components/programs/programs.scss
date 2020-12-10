@@ -1,0 +1,24 @@
+.programs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .card {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .programs {
+        width: 100%;
+    }
+    .card {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+    }
+}

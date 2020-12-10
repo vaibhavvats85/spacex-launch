@@ -1,0 +1,19 @@
+@import "../../shared-styles/colors";
+
+$btn-hover: #7cba01;
+
+.btn {
+    background-color: $button-color;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+    width: 40%;
+    margin: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $btn-hover;
+        outline: none;
+    }
+}

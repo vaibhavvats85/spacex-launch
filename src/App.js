@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Filters from './components/filters/filters';
+import Programs from './components/programs/programs';
+import * as constants from './constants';
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <Header title={constants.APP_TITLE} />
+      </div>
+      <div className="main">
+        <Filters />
+        <Programs />
+      </div>
+      <div className="signature">
+        <Signature name={constants.DEVELOPER_NAME} />
+      </div>
     </div>
   );
 }
+
+const Header = ({ title }) => (
+  <span>{title}</span>
+);
+
+
+const Signature = ({ name }) =>
+  (<>
+    <strong>{constants.DEVELOPED_BY}: </strong>
+    <span>{name}</span>
+  </>
+  );
 
 export default App;
