@@ -2,7 +2,7 @@ import * as axios from 'axios';
 import { call, put, takeLatest } from 'redux-saga/effects';
 import * as fromActions from './actions';
 
-export const SPACE_DATA_ENDPOINT = 'https://api.spacexdata.com/v3/launches?limit=100';
+const SPACE_DATA_ENDPOINT = 'https://api.spacexdata.com/v3/launches?limit=100';
 
 export function* watchLaunchPrograms() {
     yield takeLatest(fromActions.LAUNCH_PROGRAMS_REQUEST, getLaunchPrograms)
@@ -23,19 +23,10 @@ export function* watchLaunchProgramsFilters() {
 
 function* getLaunchProgramsFilters({ payload }) {
     try {
-        const filteredData = yield call(axios, getFilterEndpoint(payload));
+        const endpoint = `${SPACE_DATA_ENDPOINT}&${payload}`;
+        const filteredData = yield call(axios, endpoint);
         yield put(fromActions.launchProgramSuccess(filteredData.data))
     } catch (err) {
         yield put(fromActions.launchProgramFail(err))
     }
-}
-
-function getFilterEndpoint(payload) {
-    let FILTER_ENDPOINT = SPACE_DATA_ENDPOINT;
-    Object.keys(payload).map(key => {
-        if (payload[key]) {
-            FILTER_ENDPOINT += `&${key}=${payload[key]}`
-        }
-    });
-    return FILTER_ENDPOINT;
 }

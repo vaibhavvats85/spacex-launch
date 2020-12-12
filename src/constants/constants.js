@@ -8,3 +8,8 @@ export const SUCCESSFULL_LANDING = 'Successful Landing';
 export const FILTERS = 'Filters';
 export const LAUNCH_ERROR = 'Unable to Load Launch Programs. We will get bakc to you soon.';
 export const NO_PROGRAM = 'No programs available for the given Criteria';
+export const QUERY_MAP = {
+    [LAUNCH_YEAR]: 'launch_year',
+    [SUCCESSFULL_LAUNCH]: 'launch_success',
+    [SUCCESSFULL_LANDING]: 'land_success'
+};

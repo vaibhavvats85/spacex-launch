@@ -5,11 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
-
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 ReactDOM.hydrate(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Router>
+    <Provider store={store}>
+      <Switch>
+        <App />
+      </Switch>
+    </Provider>
+  </Router>,
   document.getElementById('root')
 );
 

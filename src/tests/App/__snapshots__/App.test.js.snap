@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render app component correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="header"
+  >
+    <Header
+      title="SpaceX Launch Programs"
+    />
+  </div>
+  <div
+    className="main"
+  >
+    <Filters />
+    <Programs />
+  </div>
+  <div
+    className="signature"
+  >
+    <Signature
+      name="Vaibhav Vats"
+    />
+  </div>
+</div>
+`;

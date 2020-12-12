@@ -2,66 +2,73 @@ import { useDispatch } from "react-redux";
 import Button from "../button/button";
 import './filters.scss';
 import * as constants from '../../constants';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { launchProgramFilter } from "../../store/launch-programs/actions";
+import { useHistory } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 const Filters = () => {
-    const [filters, setFilters] = useState({
-        launch_year: null,
-        launch_success: null,
-        land_success: null
-    });
-
     const dispatch = useDispatch();
+    const history = useHistory();
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
 
+    // Button click event
     const handleClick = (event, filter) => {
-        event.target.style.backgroundColor = 'blue';
-        switch (filter) {
-            case constants.LAUNCH_YEAR: setFilters({
-                ...filters,
-                launch_year: event.target.value
-            });
-                break;
-            case constants.SUCCESSFULL_LAUNCH: setFilters({
-                ...filters,
-                launch_success: event.target.value.toLowerCase()
-            });
-                break;
-            case constants.SUCCESSFULL_LANDING: setFilters({
-                ...filters,
-                land_success: event.target.value.toLowerCase()
-            });
-                break;
-            default:
-                break;
+        const value = event.target.value.toLowerCase();
+        const key = constants.QUERY_MAP[filter];
+        if (params.get(key) && value === params.get(key)) {
+            params.delete(key)
+        } else {
+            params.set(key, value);
         }
+        const query = params.toString();
+        dispatch(launchProgramFilter(query));
+        history.push({ pathname: '/filters', search: query });
     };
 
-    useEffect(() => {
-        dispatch(launchProgramFilter(filters));
-    }, [filters]);
-
+    // Year buttons for Launch Years
     const YearBtns = () => {
         let years = [];
         let launchStartYear = 2006;
         const currentYear = new Date().getFullYear();
 
         while (launchStartYear <= currentYear) {
-            years.push(launchStartYear);
+            years.push(launchStartYear.toString());
             launchStartYear++;
         }
-        return years.map((year, index) =>
-            <Button
+        return years.map((year, index) => {
+            const value = {
+                val: year,
+                id: year
+            }
+            return <Button
                 key={index}
-                value={year}
-                handleClick={(e) => handleClick(e, constants.LAUNCH_YEAR)} />);
-    }
+                value={value}
+                active={params.get(constants.QUERY_MAP[constants.LAUNCH_YEAR])}
+                group={constants.LAUNCH_YEAR}
+                handleClick={(e) => handleClick(e, constants.LAUNCH_YEAR)} />
+        }
+        );
+    };
 
-    const BooleanBtns = ({ type }) =>
-        (<>
-            <Button value="True" handleClick={(e) => handleClick(e, type)} />
-            <Button value="False" handleClick={(e) => handleClick(e, type)} />
-        </>);
+    // True/False buttons for Successful Landing and Successful Launch
+    const BooleanBtns = ({ type }) => (
+        ['True', 'False'].map((val, index) => {
+            const active = params.get(constants.QUERY_MAP[type]) + type;
+            const value = {
+                val: val,
+                id: val + type
+            }
+            return <Button
+                active={active}
+                key={index}
+                group={type}
+                value={value}
+                handleClick={(e) => handleClick(e, type)} />
+        }
+        ));
+
 
     return (
         <div className="filters">

@@ -19,7 +19,8 @@ export function launchProgramsreducer(state = launchProgramsInitialState, action
         case fromActions.LAUNCH_PROGRAMS_REQUEST:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                data: []
             }
         case fromActions.LAUNCH_PROGRAMS_FILTERS:
             return {

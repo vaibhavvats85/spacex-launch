@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render card correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-img"
+  >
+    <img
+      alt="rocket"
+      src="mock-image"
+    />
+  </div>
+  <span
+    className="title"
+  >
+    SpaceX first
+     #
+    1
+  </span>
+  <div
+    className="card-body"
+  >
+    <div>
+      <strong>
+        Mission Ids
+        : 
+      </strong>
+      <ul
+        className="value"
+      >
+        <li
+          key="9AD2ER"
+        >
+          9AD2ER
+        </li>
+        <li
+          key="1GT234"
+        >
+          1GT234
+        </li>
+      </ul>
+    </div>
+    <div>
+      <strong>
+        Launch Year
+        : 
+      </strong>
+      <span
+        className="value"
+      >
+        2020
+      </span>
+    </div>
+    <div>
+      <strong>
+        Successful Launch
+        : 
+      </strong>
+      <span
+        className="value"
+      >
+        true
+      </span>
+    </div>
+    <div>
+      <strong>
+        Successful Landing
+        : 
+      </strong>
+      <span
+        className="value"
+      >
+        false
+      </span>
+    </div>
+  </div>
+</div>
+`;

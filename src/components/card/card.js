@@ -3,12 +3,15 @@ import * as constants from '../../constants';
 
 import './card.scss';
 
-const Card = ({ data, styles }) => {
+const Card = ({ data }) => {
 
-    const { links: { mission_patch_small }, mission_name, flight_number, mission_id, launch_year, launch_success, rocket: { first_stage: { cores } } } = data;
+    const { links: { mission_patch_small }, mission_name, flight_number,
+        mission_id, launch_year, launch_success, rocket: { first_stage: { cores } } } = data;
+
     const { land_success } = cores[0];
+
     return (
-        <div className="card" style={styles}>
+        <div className="card">
             <div className="card-img">
                 <img alt="rocket" src={mission_patch_small}></img>
             </div>
