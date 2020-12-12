@@ -6,9 +6,9 @@ const Button = ({ value, handleClick, group, active }) => {
     const isChecked = active && value ? active.toLowerCase() === value.id.toLowerCase() : false;
 
     return (
-        <span className={isChecked ? 'btn btn-active' : 'btn'}>
+        <span>
             <input type="radio" name={group} id={value.id} value={value.val} onClick={handleClick} defaultChecked={isChecked} />
-            <label htmlFor={value.id}>{value.val}</label>
+            <label className={isChecked ? 'btn btn-active' : 'btn'} htmlFor={value.id}>{value.val}</label>
         </span>
     );
 };

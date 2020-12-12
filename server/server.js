@@ -4,17 +4,24 @@ const app = express();
 const ReactDOMServer = require('react-dom/server');
 const fs = require('fs');
 const React = require('react');
+const Router = require('react-router-dom').StaticRouter;
 const { default: App } = require('../src/App');
 const { createStore } = require('redux');
 const { rootReducer } = require('../src/store/rootReducer');
 const { Provider } = require('react-redux');
+const { createMemoryHistory } = require('history');
+
 const PORT = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
     const store = createStore(rootReducer);
+    const history = createMemoryHistory();
+    const location = req.url;
     const app = ReactDOMServer.renderToString(
         <Provider store={store}>
-            <App />
+            <Router history={history} location={location}>
+                <App />
+            </Router>
         </Provider>
     );
 
