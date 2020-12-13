@@ -68,8 +68,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - React.js v17
 - Node.js
 - Express.js
-- jest
-- enzyme
+- Jest
+- Enzyme
 - Heroku
 - Travis CI
 
