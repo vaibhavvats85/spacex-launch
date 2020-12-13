@@ -1,11 +1,10 @@
 languages: node_js
-node_js: 
-  -11
+node_js:
+  - 10.16.1
 
 cache: npm
 
-install: 
-  -npm ci
+install: -npm ci
 
 scripts:
   - npm run test
