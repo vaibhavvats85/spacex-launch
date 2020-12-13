@@ -76,10 +76,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Travis CI Tool is used to create CI pipeline to build project on every push, pull request and merge.
 `.travis.yml` in the project have all the scripts needed for a CI to pass.
+![Screenshot (60)](https://user-images.githubusercontent.com/25878689/102013458-510a5900-3d76-11eb-8ee5-d6bf4f1270f9.png)
 
 ### CD
 
 Heroku pipeline is used to create pull-request/staging/production app and deploy it automatically.
+![Screenshot (61)](https://user-images.githubusercontent.com/25878689/102013433-2e784000-3d76-11eb-9a98-4c49a90c1954.png)
 
 ## LightHouse Report
 
