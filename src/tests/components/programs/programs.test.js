@@ -4,11 +4,6 @@ import Programs from '../../../components/programs/programs';
 let wrapper;
 jest.mock('react-redux', () => ({
     useDispatch: jest.fn(),
-    useSelector: () => ({
-        data: ['some data'],
-        hasError: false,
-        loading: false
-    })
 }));
 jest.mock('react-router-dom', () => ({
     useLocation: () => jest.fn(),
@@ -24,13 +19,19 @@ test('programs component should render correctly', () => {
 });
 
 test('should render cards if data is present', () => {
+    jest.mock('react-redux', () => ({
+        useSelector: () => ({
+            data: ['some data'],
+            hasError: false,
+            loading: false
+        })
+    }));
     const cards = wrapper.find('Cards');
     expect(cards).toBeTruthy();
 });
 
 test('should render loader if data is present', () => {
     jest.mock('react-redux', () => ({
-        useDispatch: jest.fn(),
         useSelector: () => ({
             data: [],
             hasError: false,
@@ -44,7 +45,6 @@ test('should render loader if data is present', () => {
 
 test('should render error if data is present', () => {
     jest.mock('react-redux', () => ({
-        useDispatch: jest.fn(),
         useSelector: () => ({
             data: [],
             hasError: true,
@@ -58,7 +58,6 @@ test('should render error if data is present', () => {
 
 test('should render noprograms if data is present', () => {
     jest.mock('react-redux', () => ({
-        useDispatch: jest.fn(),
         useSelector: () => ({
             data: [],
             hasError: false,
