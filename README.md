@@ -5,9 +5,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## The App
 You can find the working app on https://spacex-launch-prod.herokuapp.com/
 
-## Available Scripts
+## How to run it?
 
-In the project directory, you can run:
+In the project directory, you can follow these steps:
+
+### 1. git clone https://github.com/vaibhavvats85/spacex-launch.git
+### 2. npm install
 
 ## Server Side Rendering
 
