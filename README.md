@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## The App
+You can find the working app on https://spacex-launch-prod.herokuapp.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -33,8 +36,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
@@ -60,12 +61,29 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Tech Stack
+- React.js v17
+- Node.js
+- Express.js
+- Heroku
+- Travis CI
+
+## Continous Integration(CI)/Continous Delivery(CD)
+
+### CI
+
+Travis CI Tool is used to create CI pipeline to build project on every push, pull request and merge.
+`.travis.yml` in the project have all the scripts needed for a CI to pass.
+
+### CD
+
+Heroku pipeline is used to create pull-request/staging/production app and deploy it automatically.
+
 ## LightHouse Report
 
 ![lighthouse score](https://user-images.githubusercontent.com/25878689/102007918-f57aa400-3d52-11eb-87f1-529e8600ee67.PNG)
 
 You can see the full report under the lighthouse-report folder of the repository.
-
 
 ## Learn More
 
