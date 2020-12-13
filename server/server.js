@@ -7,13 +7,12 @@ const React = require('react');
 const Router = require('react-router-dom').StaticRouter;
 const { default: App } = require('../src/App');
 const { createStore } = require('redux');
-const { rootReducer } = require('../src/store/rootReducer');
+const { rootReducer } = require('../src/store/root-reducer');
 const { Provider } = require('react-redux');
 const { createMemoryHistory } = require('history');
 
 const PORT = process.env.PORT || 8080;
-
-app.get('/', (req, res) => {
+app.get('/filters', (req, res) => {
     const store = createStore(rootReducer);
     const history = createMemoryHistory();
     const location = req.url;

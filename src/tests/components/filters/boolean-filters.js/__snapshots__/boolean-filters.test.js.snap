@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LaunchYearFilters component correctly 1`] = `
+Array [
+  <Button
+    active="truelaunch_success"
+    group="launch_success"
+    handleClick={[Function]}
+    key="0"
+    value={
+      Object {
+        "id": "Truelaunch_success",
+        "val": "True",
+      }
+    }
+  />,
+  <Button
+    active="truelaunch_success"
+    group="launch_success"
+    handleClick={[Function]}
+    key="1"
+    value={
+      Object {
+        "id": "Falselaunch_success",
+        "val": "False",
+      }
+    }
+  />,
+]
+`;

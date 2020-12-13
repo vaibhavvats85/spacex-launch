@@ -1,14 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render button corectly 1`] = `
-<span
-  className="btn"
->
+<span>
   <input
     defaultChecked={false}
+    id="2006"
     onClick={[MockFunction]}
     type="radio"
+    value="2006"
   />
-  <label />
+  <label
+    className="btn"
+    htmlFor="2006"
+  >
+    2006
+  </label>
 </span>
 `;

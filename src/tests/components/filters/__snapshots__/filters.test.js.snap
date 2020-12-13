@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render filters component correctly 1`] = `
+<div
+  className="filters"
+>
+  <h1>
+    Filters
+  </h1>
+  <div
+    className="type"
+  >
+    <span
+      className="head"
+    >
+      Launch Year
+    </span>
+    <div
+      className="btns"
+    >
+      <LaunchYearFilters
+        clickEvent={[Function]}
+        type="launch_year"
+      />
+    </div>
+  </div>
+  <div
+    className="type"
+  >
+    <span
+      className="head"
+    >
+      Successful Launch
+    </span>
+    <BooleanFilters
+      clickEvent={[Function]}
+      type="launch_success"
+    />
+  </div>
+  <div
+    className="type"
+  >
+    <span
+      className="head"
+    >
+      Successful Landing
+    </span>
+    <BooleanFilters
+      clickEvent={[Function]}
+      type="land_success"
+    />
+  </div>
+</div>
+`;

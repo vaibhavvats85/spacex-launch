@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LaunchYearFilters component correctly 1`] = `
+Array [
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="0"
+    value={
+      Object {
+        "id": "2006",
+        "val": "2006",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="1"
+    value={
+      Object {
+        "id": "2007",
+        "val": "2007",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="2"
+    value={
+      Object {
+        "id": "2008",
+        "val": "2008",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="3"
+    value={
+      Object {
+        "id": "2009",
+        "val": "2009",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="4"
+    value={
+      Object {
+        "id": "2010",
+        "val": "2010",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="5"
+    value={
+      Object {
+        "id": "2011",
+        "val": "2011",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="6"
+    value={
+      Object {
+        "id": "2012",
+        "val": "2012",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="7"
+    value={
+      Object {
+        "id": "2013",
+        "val": "2013",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="8"
+    value={
+      Object {
+        "id": "2014",
+        "val": "2014",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="9"
+    value={
+      Object {
+        "id": "2015",
+        "val": "2015",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="10"
+    value={
+      Object {
+        "id": "2016",
+        "val": "2016",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="11"
+    value={
+      Object {
+        "id": "2017",
+        "val": "2017",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="12"
+    value={
+      Object {
+        "id": "2018",
+        "val": "2018",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="13"
+    value={
+      Object {
+        "id": "2019",
+        "val": "2019",
+      }
+    }
+  />,
+  <Button
+    active="2006"
+    group="launch_year"
+    handleClick={[Function]}
+    key="14"
+    value={
+      Object {
+        "id": "2020",
+        "val": "2020",
+      }
+    }
+  />,
+]
+`;

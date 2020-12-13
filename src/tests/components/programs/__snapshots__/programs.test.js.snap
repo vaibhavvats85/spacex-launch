@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`programs component should render correctly 1`] = `
+<div
+  className="programs"
+>
+  <Cards
+    lauchPrograms={
+      Array [
+        "some data",
+      ]
+    }
+  />
+</div>
+`;
