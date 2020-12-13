@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import Button from '../../button/button';
+import React from 'react';
 
 // True/False buttons for Successful Landing and Successful Launch
 const BooleanFilters = ({ clickEvent, type }) => {

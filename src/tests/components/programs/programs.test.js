@@ -13,16 +13,17 @@ jest.mock('react-redux', () => ({
 jest.mock('react-router-dom', () => ({
     useLocation: () => jest.fn(),
     useHistory: () => jest.fn()
-}))
+}));
+
 beforeEach(() => {
     wrapper = shallow(<Programs />);
-
 });
+
 test('programs component should render correctly', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
 test('should render cards if data is present', () => {
-    const card = wrapper.find('Cards');
-    expect(card).toBeTruthy();
+    const cards = wrapper.find('Cards');
+    expect(cards).toBeTruthy();
 });
