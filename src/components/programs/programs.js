@@ -9,10 +9,10 @@ import * as constants from '../../constants';
 const Programs = () => {
     const { data, hasError, loading } = useSelector(state => state.launchPrograms);
     const dispatch = useDispatch();
-    
+
     useEffect(() => {
         dispatch(launchProgramRequest());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="programs">

@@ -1,0 +1,11 @@
+languages: node_js
+node_js:
+  - 10.16.1
+
+cache: npm
+
+scripts:
+  - npm run test
+  - npm run build
+
+after_success: echo "Build Success"
