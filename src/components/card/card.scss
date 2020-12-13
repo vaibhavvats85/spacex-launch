@@ -4,7 +4,8 @@ $desc-color: #5b62a4;
 
 .card {
     background-color: white;
-    height: max-content;
+    height: inherit;
+    max-height: 55%;
     width: 18%;
     padding: 15px;
     margin: 10px;
