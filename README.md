@@ -65,10 +65,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - React.js v17
 - Node.js
 - Express.js
+- jest
+- enzyme
 - Heroku
 - Travis CI
 
-## Continous Integration(CI)/Continous Delivery(CD)
+## Continous Integration(CI)/Continous Deployment(CD)
 
 ### CI
 
