@@ -12,7 +12,7 @@ const { Provider } = require('react-redux');
 const { createMemoryHistory } = require('history');
 
 const PORT = process.env.PORT || 8000;
-app.get('/', (req, res) => {
+app.get(['/', '/filters'], (req, res) => {
     const store = createStore(rootReducer);
     const history = createMemoryHistory();
     const location = req.url;
