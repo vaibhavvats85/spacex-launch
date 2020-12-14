@@ -13,7 +13,7 @@ const Card = ({ data }) => {
     return (
         <div className="card">
             <div className="card-img">
-                <img alt="rocket" src={mission_patch_small}></img>
+                <img alt={mission_name + flight_number} src={mission_patch_small}></img>
             </div>
 
             <span className="title">{mission_name} #{flight_number}</span>
