@@ -22,7 +22,7 @@ const Filters = () => {
         }
         const query = params.toString();
         dispatch(launchProgramFilter(query));
-        history.push({ pathname: '/', search: query });
+        history.push({ pathname: '/filters', search: query });
     };
 
     return (
