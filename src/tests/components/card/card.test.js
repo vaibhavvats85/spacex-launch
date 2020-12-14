@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme';
 import Card from '../../../components/card/card';
+import React from 'react';
 
 const mockPrograms = {
     flight_number: 1,

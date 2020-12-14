@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme';
 import LaunchYearFilters from '../../../../components/filters/type/launch-year';
 import * as constants from '../../../../constants';
+import React from 'react';
 
 let wrapper;
 let props = {
