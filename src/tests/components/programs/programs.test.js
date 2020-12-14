@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme';
 import Programs from '../../../components/programs/programs';
+import React from 'react';
 
 let wrapper;
 jest.mock('react-redux', () => ({

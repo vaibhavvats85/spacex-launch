@@ -1,7 +1,8 @@
 import { shallow } from 'enzyme';
-import { useLocation } from 'react-router-dom';
 import BooleanFilters from '../../../../components/filters/type/boolean-filter';
 import * as constants from '../../../../constants';
+import React from 'react';
+
 let wrapper;
 let props = {
     type: constants.LAUNCH_SUCCESS_KEY,
