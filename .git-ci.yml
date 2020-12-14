@@ -10,16 +10,13 @@ cache:
     - node_modules/
 
 Install:
-  stage: build
   script:
-    - npm install 
+    - npm install --legacy-peer-deps
 
 Build:
-  stage: build
   script:
     - npm build
 
 Test:
-  stage: test
   script:
     - npm test
