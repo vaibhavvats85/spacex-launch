@@ -11,7 +11,7 @@ cache:
 
 Install:
   script:
-    - npm install  
+    - npm install 
 
 Build:
   script:
