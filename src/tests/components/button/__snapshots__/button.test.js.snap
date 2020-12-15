@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render button corectly 1`] = `
-<Fragment>
+<div
+  className="button"
+>
   <input
     defaultChecked={false}
     id="2006"
@@ -15,5 +17,5 @@ exports[`should render button corectly 1`] = `
   >
     2006
   </label>
-</Fragment>
+</div>
 `;

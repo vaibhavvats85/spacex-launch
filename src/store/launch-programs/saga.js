@@ -23,8 +23,7 @@ export function* watchLaunchProgramsFilters() {
 
 function* getLaunchProgramsFilters({ payload }) {
     try {
-        const endpoint = `${SPACE_DATA_ENDPOINT}&${payload}`;
-        const filteredData = yield call(axios, endpoint);
+        const filteredData = yield call(axios, { url: SPACE_DATA_ENDPOINT, params: payload });
         yield put(fromActions.launchProgramSuccess(filteredData.data))
     } catch (err) {
         yield put(fromActions.launchProgramFail(err))
