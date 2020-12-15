@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SpaceX Launch App
 
 ## The App
 You can find the working app on https://spacex-launch-prod.herokuapp.com/
@@ -11,13 +9,14 @@ In the project directory, you can follow these steps:
 
 ### 1. git clone https://github.com/vaibhavvats85/spacex-launch.git
 ### 2. npm install
+### 3. Follow below mentioned steps for CLientSide/Server Side rendering.
 
 ## Server Side Rendering
 
 ### `npm start`
 
 Runs the app in the production mode.\
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
 The page will not reload if you make edits.\
 
@@ -25,7 +24,7 @@ The page will not reload if you make edits.\
 ### `npm ssr:dev`
 
 Runs the app in the development mode.\
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
 The page will reload if you make edits.\
 
@@ -66,20 +65,24 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Tech Stack
 - React.js v17
-- Node.js
+- Node.js v10
 - Express.js
 - Jest
 - Enzyme
 - Heroku
-- Travis CI
+- GitLab
 
 ## Continous Integration(CI)/Continous Deployment(CD)
 
 ### CI
 
-Travis CI Tool is used to create CI pipeline to build project on every push, pull request and merge.
-`.travis.yml` in the project have all the scripts needed for a CI to pass.
-![Screenshot (60)](https://user-images.githubusercontent.com/25878689/102013458-510a5900-3d76-11eb-8ee5-d6bf4f1270f9.png)
+GitLab CI is used to create CI pipeline to build project on every push, pull request and merge.
+`.getlab-ci.yml` in the project have all the scripts/jobs needed for a CI to execute.
+
+![Screenshot (62)](https://user-images.githubusercontent.com/25878689/102259385-0b47bf00-3f35-11eb-93b0-c439473859d4.png)
+
+![Screenshot (64)](https://user-images.githubusercontent.com/25878689/102259231-d8053000-3f34-11eb-9d86-801540c4b917.png)
+
 
 ### CD
 
@@ -91,6 +94,9 @@ Heroku pipeline is used to create pull-request/staging/production app and deploy
 ![lighthouse score](https://user-images.githubusercontent.com/25878689/102007918-f57aa400-3d52-11eb-87f1-529e8600ee67.PNG)
 
 You can see the full report under the lighthouse-report folder of the repository.
+
+## Web Accessibility Testing (using WAVE chrome extension)
+![Capture](https://user-images.githubusercontent.com/25878689/102259900-b48eb500-3f35-11eb-9523-1afb7f6ea5bc.PNG)
 
 ## Learn More
 
