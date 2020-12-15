@@ -69,6 +69,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Express.js
 - Jest
 - Enzyme
+- Redux Saga
 - Heroku
 - GitLab
 
