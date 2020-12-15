@@ -11,6 +11,7 @@ In the project directory, you can follow these steps:
 ### 2. npm install
 ### 3. Follow below mentioned steps for Client Side/Server Side rendering.
 
+
 ## Server Side Rendering
 
 ### `npm start`
