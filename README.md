@@ -9,7 +9,7 @@ In the project directory, you can follow these steps:
 
 ### 1. git clone https://github.com/vaibhavvats85/spacex-launch.git
 ### 2. npm install
-### 3. Follow below mentioned steps for CLientSide/Server Side rendering.
+### 3. Follow below mentioned steps for Client Side/Server Side rendering.
 
 ## Server Side Rendering
 
