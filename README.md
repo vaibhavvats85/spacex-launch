@@ -95,7 +95,5 @@ Heroku pipeline is used to create pull-request/staging/production app and deploy
 
 You can see the full report under the lighthouse-report folder of the repository.
 
-## Web Accessibility Testing (using WAVE chrome extension)
+## Web Accessibility Evaluation (using WAVE chrome extension)
 ![Capture](https://user-images.githubusercontent.com/25878689/102259900-b48eb500-3f35-11eb-9523-1afb7f6ea5bc.PNG)
-
-## Hope you find it Informative!
