@@ -26,5 +26,5 @@ test('programs component should render correctly', () => {
 
 test('should render cards if data is present', () => {
     const cards = wrapper.find('Cards');
-    expect(cards).toBeTruthy();
+    expect(cards.exists()).toBeTruthy();
 });

@@ -20,10 +20,23 @@ const Filters = () => {
         } else {
             params.set(key, value);
         }
+        const queryObj = getParamsObj(params);
+        dispatch(launchProgramFilter(queryObj));
+
         const query = params.toString();
-        dispatch(launchProgramFilter(query));
         history.push({ pathname: '/filters', search: query });
     };
+
+    const getParamsObj = (params) => {
+        let queryObj = {};
+        for (let entry of params.entries()) {
+            queryObj = {
+                ...queryObj,
+                [entry[0]]: entry[1]
+            }
+        };
+        return queryObj;
+    }
 
     return (
         <div className="filters">
