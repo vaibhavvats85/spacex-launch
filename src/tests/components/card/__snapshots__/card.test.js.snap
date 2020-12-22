@@ -8,7 +8,7 @@ exports[`should render card correctly 1`] = `
     className="card-img"
   >
     <img
-      alt="rocket"
+      alt="SpaceX first1"
       src="mock-image"
     />
   </div>

@@ -26,7 +26,8 @@ export function launchProgramsreducer(state = launchProgramsInitialState, action
             return {
                 ...state,
                 loading: true,
-                filters: action.payload
+                filters: action.payload,
+                data: []
             }
         case fromActions.LAUNCH_PROGRAMS_SUCCESS:
             return {
