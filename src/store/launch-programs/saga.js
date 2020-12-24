@@ -8,20 +8,7 @@ export function* watchLaunchPrograms() {
     yield takeLatest(fromActions.LAUNCH_PROGRAMS_REQUEST, getLaunchPrograms)
 }
 
-function* getLaunchPrograms() {
-    try {
-        const lauchPrograms = yield call(axios, SPACE_DATA_ENDPOINT);
-        yield put(fromActions.launchProgramSuccess(lauchPrograms.data))
-    } catch (err) {
-        yield put(fromActions.launchProgramFail(err))
-    }
-}
-
-export function* watchLaunchProgramsFilters() {
-    yield takeLatest(fromActions.LAUNCH_PROGRAMS_FILTERS, getLaunchProgramsFilters)
-}
-
-function* getLaunchProgramsFilters({ payload }) {
+function* getLaunchPrograms({ payload }) {
     try {
         const filteredData = yield call(axios, { url: SPACE_DATA_ENDPOINT, params: payload });
         yield put(fromActions.launchProgramSuccess(filteredData.data))

@@ -5,7 +5,6 @@ import React from 'react';
 let wrapper;
 jest.mock('react-redux', () => ({
     useDispatch: () => jest.fn(),
-
 }));
 jest.mock('react-router-dom', () => ({
     useLocation: () => jest.fn(),

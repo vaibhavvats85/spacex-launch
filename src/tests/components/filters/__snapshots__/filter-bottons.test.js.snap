@@ -3,26 +3,26 @@
 exports[`should render LaunchYearFilters component correctly 1`] = `
 Array [
   <Button
-    active="truelaunch_success"
-    group="launch_success"
+    active="2006launch_year"
+    group="launch_year"
     handleClick={[Function]}
     key="0"
     value={
       Object {
-        "id": "Truelaunch_success",
-        "val": "True",
+        "id": "2006launch_year",
+        "val": "2006",
       }
     }
   />,
   <Button
-    active="truelaunch_success"
-    group="launch_success"
+    active="2006launch_year"
+    group="launch_year"
     handleClick={[Function]}
     key="1"
     value={
       Object {
-        "id": "Falselaunch_success",
-        "val": "False",
+        "id": "2007launch_year",
+        "val": "2007",
       }
     }
   />,

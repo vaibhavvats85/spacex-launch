@@ -1,17 +1,22 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { launchProgramRequest } from "../../store/launch-programs/actions";
+import { launchProgramFilter, launchProgramRequest } from "../../store/launch-programs/actions";
 import './programs.scss';
 import '../../shared-styles/loader.scss';
 import * as constants from '../../constants';
 import Cards from "./cards";
+import { useLocation } from "react-router-dom";
+import * as utils from '../../utils';
 
 const Programs = () => {
     const { data, hasError, loading } = useSelector(state => state.launchPrograms);
     const dispatch = useDispatch();
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const queryObj = utils.getParamsObj(params);
 
     useEffect(() => {
-        dispatch(launchProgramRequest());
+        dispatch(launchProgramRequest(queryObj));
     }, [dispatch]);
 
     return (

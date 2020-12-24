@@ -1,24 +1,27 @@
 import { shallow } from 'enzyme';
-import BooleanFilters from '../../../../components/filters/type/boolean-filter';
-import * as constants from '../../../../constants';
+import * as constants from '../../../constants';
 import React from 'react';
+import FilterButtons from '../../../components/filters/filter-buttons';
 
 let wrapper;
 let props = {
-    type: constants.LAUNCH_SUCCESS_KEY,
+    btns: ['2006', '2007'],
+    type: constants.LAUNCH_YEAR_KEY,
+    params: { get: jest.fn().mockReturnValue('2006') },
     clickEvent: jest.fn()
 }
 jest.mock('react-router-dom', () => ({
-    useLocation: () => ({ search: '?launch_success=true' }),
+    useLocation: () => ({ search: '?launch_year=2006' }),
 }));
 
 beforeEach(() => {
-    wrapper = shallow(<BooleanFilters {...props} />);
+    wrapper = shallow(<FilterButtons {...props} />);
 });
 
 test('should render LaunchYearFilters component correctly', () => {
     expect(wrapper).toMatchSnapshot();
 });
+
 
 test('should check button correctly', () => {
     const active = wrapper.find('Button').at(0).prop('active').toLowerCase();
