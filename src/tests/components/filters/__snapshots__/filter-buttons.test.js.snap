@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render LaunchYearFilters component correctly 1`] = `
+exports[`should render FilterButtons component correctly 1`] = `
 Array [
   <Button
     active="2006launch_year"

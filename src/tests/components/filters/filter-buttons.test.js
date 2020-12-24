@@ -18,7 +18,7 @@ beforeEach(() => {
     wrapper = shallow(<FilterButtons {...props} />);
 });
 
-test('should render LaunchYearFilters component correctly', () => {
+test('should render FilterButtons component correctly', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
