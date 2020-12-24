@@ -15,10 +15,11 @@
 
   .signature {
     text-align: center;
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    background-color: $gray-bg;
+    background-color: #f2f2f2;
     height: 34px;
+    width: 100%;
   }
 }
 

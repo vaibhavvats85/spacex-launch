@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { launchProgramRequest } from "../../store/launch-programs/actions";
-import Card from "../card/card";
 import './programs.scss';
 import '../../shared-styles/loader.scss';
 import * as constants from '../../constants';
+import Cards from "./cards";
 
 const Programs = () => {
     const { data, hasError, loading } = useSelector(state => state.launchPrograms);
@@ -19,17 +19,13 @@ const Programs = () => {
             {
                 (data.length !== 0) ?
                     <Cards lauchPrograms={data} /> :
-                    (loading) ? <Loader /> : (hasError) ? <Error /> : <Noprograms />
+                    (loading) ?
+                        <Loader /> : (hasError) ?
+                            <Error /> : <Noprograms />
             }
         </div>
     );
 }
-
-const Cards = ({ lauchPrograms }) => (
-    lauchPrograms.map((program) => {
-        const { flight_number, mission_name } = program;
-        return <Card key={flight_number + mission_name} data={program} />
-    }));
 
 const Loader = () => (<div className="loading"></div>);
 
